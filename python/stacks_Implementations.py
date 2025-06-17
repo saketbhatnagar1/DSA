@@ -11,4 +11,5 @@ class MatheMatics:
         return count
     @staticmethod
     def Palindrome_Numbers(number:int)->int:
+        pass
         
