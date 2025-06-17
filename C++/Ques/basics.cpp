@@ -4,7 +4,7 @@ using namespace std;
 #include<bits/stdc++.h>
 #include <list>
 #include<stack>
-
+#include<deque>
 class Queue{
   //using array
   int *arr;
@@ -122,11 +122,18 @@ bool empty()
 
 
 };
+
+
+//deque
+
+
 int main()
 {
-
-
-
+    //deque
+    deque<int> dq;
+    dq.push_back(1);
+    dq.push_front(4);
+    
 
 
 
