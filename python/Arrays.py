@@ -22,11 +22,30 @@ def max_common_sum(w):
     return max_count  # or return best_p if you need the permutation too
 
 #nums = [1,2,3,4]=>[1,3,5,9]
+# def prefixSum(nums):
+#     ans = []
+#     sum = 0
+#     for i in nums:
+#         sum = sum+i
+#         ans.append(sum)
+#     return ans
 def prefixSum(nums):
-    ans = []
     sum = 0
-    for i in nums:
-        sum = sum+i
-        ans.append(sum)
-    return ans
-print(prefixSum([3,7,2,5,8]))
+    for i in range(1,len(nums)):
+        nums[i] += nums[i-1]
+    return nums
+
+print(prefixSum([1,2,3,4]))
+
+class NumArray:
+    def __init__(self,nums:list[int]):
+        self.prefSum  = [0]*len(nums)
+        for i in range(len(nums)):
+            self.prefSum[i] = nums[i]
+    def printdouble(self):
+        length = len(self.prefSum)        
+        for i in range(length):
+            print(2*self.prefSum[i])
+test1 = NumArray([1,2,3,4])
+test1.printdouble()
+    
