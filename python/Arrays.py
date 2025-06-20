@@ -17,9 +17,16 @@ def max_common_sum(w):
         if most_common > max_count:
             max_count = most_common
             best_p = p
+            print(best_p)
 
     return max_count  # or return best_p if you need the permutation too
 
-# Example
-w = [1, 3, 2, 4]
-print(max_common_sum(w))  # Output: 4
+#nums = [1,2,3,4]=>[1,3,5,9]
+def prefixSum(nums):
+    ans = []
+    sum = 0
+    for i in nums:
+        sum = sum+i
+        ans.append(sum)
+    return ans
+print(prefixSum([3,7,2,5,8]))
