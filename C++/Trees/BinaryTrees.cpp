@@ -33,7 +33,7 @@ int main()
     
 vector<int> data = {1,2,-1,-1,3,4,-1,-1,5,-1,-1};
 Node *root = preOrderBuild(data);
-cout<<root->right->left->;
+
 PreOrdTra(root);
     return 69;
 }
@@ -46,8 +46,7 @@ void PreOrdTra(Node* root)
         return;
     }
     cout<<root->data;
-    preOrdTra(root->left);
-    preOrdTra(root->right);
-
-    return root;
+    PreOrdTra(root->left);
+    PreOrdTra(root->right);
 }
+
