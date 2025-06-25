@@ -41,3 +41,47 @@ if __name__ == "__main__":
     min_heap_demo()
     max_heap_demo()
     custom_heap_demo()
+'''
+        1
+       / \
+      3   5
+     / \
+    4   8
+    Min heap
+
+
+        10
+       /  \
+      5    3
+     / \
+    1   2
+    Max Heap
+
+
+
+| Operation              | Time Complexity | Notes                                                         |
+| ---------------------- | --------------- | ------------------------------------------------------------- |
+| Insert (`push`)        | O(log n)        | Inserts at the bottom, then "heapify up"                      |
+| Delete Min/Max (`pop`) | O(log n)        | Removes root, replaces with last element, then "heapify down" |
+| Peek (`top`)           | O(1)            | Get the root element                                          |
+
+How is it Implemented?
+Although heaps are conceptually trees, they are implemented using arrays/lists:
+
+For an element at index i:
+
+Left child is at 2*i + 1
+
+Right child is at 2*i + 2
+
+Parent is at (i - 1) // 2
+
+Example array for min-heap [1, 3, 5, 4, 8] represents this tree:
+
+         1
+       / \
+      3   5
+     / \
+    4   8
+
+'''
