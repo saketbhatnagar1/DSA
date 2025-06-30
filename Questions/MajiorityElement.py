@@ -5,7 +5,7 @@ print(sorted(nums))
 print(sorted(nums)[majiority])
 
 class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
+    def majorityElement(self, nums: list[int]) -> int:
         count = {}
         n = int((len(nums)/2))
         maxfreq = 0
