@@ -50,4 +50,12 @@ class Solution:
             else:
                 freq[i]-=1
         return True
-       
+    def areDisjoint(self, a, b):
+        freq = {}
+        for i in a:
+            freq[i] = freq.get(i,0)+1
+        for i in b:
+            if i in freq:
+                return False
+        return True
+                
