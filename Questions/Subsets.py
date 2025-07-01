@@ -11,6 +11,8 @@
 # Input: a[] = [10, 5, 2, 23, 19], b = [19, 5, 3] 
 # Output: false
 
+
+#GFG SOlutions on Hashing Questions
 class Solution:
     #BruteForce fails for duplicates
     def BruteForceSolve(a:list,b:list)->bool:
@@ -50,6 +52,8 @@ class Solution:
             else:
                 freq[i]-=1
         return True
+   
+    #Check if no two arrays are disjoint or not 
     def areDisjoint(self, a, b):
         freq = {}
         for i in a:
@@ -58,4 +62,7 @@ class Solution:
             if i in freq:
                 return False
         return True
-                
+    def secondLargestElement(self,a:list)->int:
+        #Find the index of Largest
+        largestIndex = 0
+        largestValue = float('-inf')
