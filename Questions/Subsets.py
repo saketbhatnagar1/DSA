@@ -63,6 +63,35 @@ class Solution:
                 return False
         return True
     def secondLargestElement(self,a:list)->int:
-        #Find the index of Largest
+        #Find the index of Largest,2 pass
         largestIndex = 0
         largestValue = float('-inf')
+        secondLargestIndex = 0
+        secondLaargestValue = float('-inf')
+        for i in range(len(a)):
+            if a[i]>largestValue:
+                largestValue = a[i]
+                largestIndex = i
+        for i in range(len(a)):
+            if a[i]>secondLaargestValue and not a[i] == largestValue:
+                secondLaargestValue = a[i]
+                secondLargestIndex = i
+        return secondLargestIndex 
+    def secondLargestOptimized(self,a:list)->int:
+        #[32,12,21,1,43,323]
+        largest = -1
+        secondlargest = -1
+        for i in range(len(a)):
+            if a[i]>largest:
+                secondlargest = largest
+                largest = a[i]
+            elif a[i]>secondlargest and( not a[i]==largest):
+                secondlargest = a[i]
+        return secondlargest
+    def getThreeLargest(self, arr):
+        arr = sorted(arr)
+        ans = []
+        for i in range(len(arr)-1,-1,-1):
+            if arr[i] not in ans and len(ans)<3:
+                ans.append(arr[i])
+        return ans
