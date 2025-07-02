@@ -109,3 +109,38 @@ class Solution:
                     ans.append(arr[j])
         return ans
 
+    def checkEqual(self, a, b) -> bool:
+        freq_count = {}
+        for i in range(len(a)):
+             if a[i] in freq_count:
+                freq_count[a[i]]+=1
+             else:
+                freq_count[a[i]]=1
+        for i in range(len(b)):
+            equal = True
+            if freq_count.get(b[i],0) == 0:
+                equal=False
+                return False
+            else:
+                freq_count[b[i]]-=1
+        if equal:
+            return True
+    def UnionOfArrays(self,a:list,b:list)->list:
+        ans = []
+        freq = {}
+        for i in range(len(a)):
+            if a[i] not in freq:
+                freq[a[i]] = i
+                ans.append(a[i])
+        for i in range(len(b)):
+            if b[i] not in freq:
+                freq[b[i]] = i
+                ans.append(b[i])
+        return ans
+
+a = [1,2,3,2,1]
+b = [3,2,2,3,3,2]
+
+result = Solution()
+
+
