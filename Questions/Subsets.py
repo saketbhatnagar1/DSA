@@ -95,3 +95,17 @@ class Solution:
             if arr[i] not in ans and len(ans)<3:
                 ans.append(arr[i])
         return ans
+    def leaders(self, arr):
+        #BRUTEFORCE
+        ans = []
+        n = len(arr)
+        for i in range(n):
+            isLeader = True
+            for j in range(i+1,n):
+                if arr[i]<arr[j]:
+                    isLeader = False
+                    break
+                if isLeader:
+                    ans.append(arr[j])
+        return ans
+
