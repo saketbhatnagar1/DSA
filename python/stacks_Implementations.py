@@ -12,4 +12,5 @@ class MatheMatics:
     @staticmethod
     def Palindrome_Numbers(number:int)->int:
         pass
-        
+             
+    
