@@ -53,11 +53,10 @@ class Solution:
                     n -= 1
                     if n == 0:
                         return True
-        return n <= 0
-
-
-        
-                
-
+        return n <= 0           
+    def reverseWords(self, s: str) -> str:
+        s = s.strip()
+        s = s.split()
+        return " ".join(s[::-1])
             
         
